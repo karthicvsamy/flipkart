@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import elementRepository.HomepagePage;
@@ -20,6 +21,8 @@ public class GetAllmobileDetails extends FBaseClass{
 		
 		HomepagePage home = new HomepagePage(driver);
 		SearchpagePage searchPage = new SearchpagePage(driver);
+		
+		Assert.assertEquals(false, true);
 		
 		home.searchWithText(eutils.getStringValue("Sheet1", 1, 0));
 		

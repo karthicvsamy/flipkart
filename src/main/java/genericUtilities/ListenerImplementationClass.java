@@ -1,6 +1,7 @@
 package genericUtilities;
 
 import java.io.IOException;
+import java.util.Date;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -61,7 +62,8 @@ public class ListenerImplementationClass implements ITestListener {
 	@Override
 	public void onStart(ITestContext context) {
 		
-		ExtentSparkReporter sparkReport = new ExtentSparkReporter("./ExtentReports/report.html");
+		ExtentSparkReporter sparkReport = new ExtentSparkReporter("./ExtentReports/report"+String.valueOf(new Date()).replace(' ', '_')
+																									.replace(':', '_')+".html");
 		sparkReport.config().setDocumentTitle("allMobiles");
 		sparkReport.config().setReportName("FlipkartMobils");
 		sparkReport.config().setTheme(Theme.STANDARD);

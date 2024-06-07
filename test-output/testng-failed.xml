@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Flipkart.GetAllmobileDetails">
+      <class name="Flipkart.Sample">
         <methods>
-          <include name="closeBrowser"/>
-          <include name="printDesc"/>
-          <include name="openBrowser"/>
+          <include name="hh"/>
         </methods>
-      </class> <!-- Flipkart.GetAllmobileDetails -->
+      </class> <!-- Flipkart.Sample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -30,7 +30,7 @@ public class FWebdriverUtility {
 	public String screenshot() throws IOException {
 		TakesScreenshot tss = (TakesScreenshot)driver;
 		File tempfile = tss.getScreenshotAs(OutputType.FILE);
-		File permfile = new File(".defectScreenShots/defect"+String.valueOf(new Date()).replace(' ' , '_')+".png");
+		File permfile = new File("./Defect screenshots/defect"+String.valueOf(new Date()).replace(' ' , '_').replace(':', '_')+".png");
 		Files.copy(tempfile, permfile);
 		
 		return permfile.getAbsolutePath();
